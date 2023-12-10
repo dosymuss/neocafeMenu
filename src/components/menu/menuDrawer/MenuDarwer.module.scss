@@ -1,0 +1,58 @@
+@mixin text($s) {
+  margin: 0;
+  text-align: center;
+  font-size: $s;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: white;
+}
+
+.main {
+  padding: 24px;
+  width: 495px;
+  background: #023462;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+.drawHead {
+    width: 495px;
+  position: relative;
+  align-items: center;
+  height: 35px;
+  p {
+    @include text(20px);
+  }
+  .x {
+    position: absolute;
+    right: 0;
+    top: -5px;
+  }
+}
+.drawFot {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      @include text(16px);
+    }
+  }
+  button {
+    display: flex;
+    width: 100%;
+    padding: 19px 158px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background: var(--barista-orange, #FF8B5B);
+    @include text(16px);
+  }
+}
